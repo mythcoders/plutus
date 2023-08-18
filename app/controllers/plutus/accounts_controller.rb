@@ -11,6 +11,8 @@ module Plutus
   #
   # @author Michael Bulat
   class AccountsController < ::Plutus::ApplicationController
+    unloadable if respond_to?(:unloadable)
+
     # @example
     #   GET /accounts
     #   GET /accounts.xml
